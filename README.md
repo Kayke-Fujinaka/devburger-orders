@@ -1,31 +1,28 @@
-# Dev's Burger Order with Node
+<h1 align="center">🍟 Dev's Burger Order</h1>
 
 <img src="./assets/img/gif.gif" alt="Gif do Teste">
 
-## :rocket: Sobre o desafio
+## :page_facing_up: Description
 
-É uma aplicação que fará o cadastro dos pedidos de uma hamburgueria.
+Burguer Order CRUD is a web application that allows users to create, read, update, and delete burger orders. Users can create new orders, view existing orders, modify orders, and remove orders from the system. The application also includes a login and registration system to secure user data. Burguer Order CRUD is built using React, Node.js, and MongoDB, making it scalable and efficient.
 
-### Rotas
+### Routes
 
-- `POST /order`: A rota recebe o `pedido do cliente`, o `nome do cliente` e o `valor do pedido`, elas são passadas dentro do corpo(body) da requisição, e são colocadas dentro de um array.
+- `POST /order`: This route receives the `customer's order`, `customer's name`, and `order value`, which are passed in the request body, and are placed inside an array.
 
+- `GET /order`: Route that lists all orders already made.
 
-- `GET /order`: Rota que lista todos os pedidos já feitos.
+- `PUT /order/:id`: This route changes an already made order.
 
-- `PUT /order/:id`: Essa rota altera um pedido já feito.
+- `DELETE /order/:id`: This route deletes an already made order with the `id` sent in the route parameters.
 
-- `DELETE /order/:id`: Essa rota deleta um pedido já feito com o `id` enviado nos parâmetros da rota.
+- `GET /order/:id`: This route receives the `id` in the parameters and returns a specific order.
 
-- `GET /order/:id`: Essa rota recebe o `id` nos parâmetros e retorna um pedido específico.
+- `PATCH /order/:id`: This route receives the `id` in the parameters and as soon as it is called, changes the status of the order received by the id to "Ready".
 
-- `PATCH /order/:id`: Essa rota recebe o `id` nos parâmetros e assim que ela for chamada, altera o status do pedido recebido pelo id para "Pronto".
+### Example
 
-
-### Exemplo
-
-Se eu chamar a rota `POST /order` repassando `{ order: "Cheeseburguer, Balde de nugget, 1 Água", clienteName:"Cleber Rocha", price: 44.50 }`,
-o array deve ficar assim:
+If I call the `POST /order` route passing `{ order: "Cheeseburguer, Balde de nugget, 1 Água", clienteName:"Cleber Rocha", price: 44.50 }`, the array should look like this:
 
 ```js
 [
@@ -40,8 +37,7 @@ o array deve ficar assim:
 ```
 
 
-Se eu chamar a rota `PATCH /order/ac3ebf68-e0ad-4c1d-9822-ff1b849589a8`,
-o array deve ficar assim:
+If I call the `PATCH /order/ac3ebf68-e0ad-4c1d-9822-ff1b849589a8`, route, the array should look like this:
 
 ```js
 [
@@ -57,28 +53,27 @@ o array deve ficar assim:
 
 ### Middlewares
 
-MIDDLEWARE CHECK - Vai receber o ID e verificar se ele existe. 
-Caso não existir vai enviar uma mensagem de erro, mas se existir a requisição será continuada.
+MIDDLEWARE CHECK - It will receive the ID and check if it exists. If it doesn't exist, it will send an error message, but if it exists, the request will be continued.
 
-MIDDLEWARE METHOD - Ele mostra o método da requisiçao(GET,POST,PUT,DELETE, etc) e também a url da requisição.
+MIDDLEWARE METHOD - It displays the request method (GET, POST, PUT, DELETE, etc) and also the request URL.
 
-### Exemplo
-Método: [GET] - URL: /order
+### Example
+Method: [GET] - URL: /order
 
-## :rocket: Tecnologias ##
+## :rocket: Technologies ##
 
-Neste projeto foram utilizadas as seguintes ferramentas:
+The following tools were used in this project:
 
 - [Node](https://nodejs.org/en/)  
 - [Express](https://expressjs.com/pt-br/)
 - [Insomnia](https://insomnia.rest/products/insomnia)
 - [uuid](https://www.npmjs.com/package/uuid)
 
-## :closed_book: Requisitos ##
+## :closed_book: Requirements ##
 
-Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
+Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed on your computer.
 
-## :checkered_flag: Iniciando ##
+## :checkered_flag: Getting Started ##
 
 ```bash
 # Clone this project
@@ -92,17 +87,17 @@ $ npm start
 # The server will initialize in the <http://localhost:3001>
 ```
 
-## 🤝 Colaboradores
+## 🤝 Contributors
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+We want to thank the following people who contributed to this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="140px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="100px;" alt="Kayke Fujinaka's photo on GitHub"/><br>
         <sub>
-          <b>Kayke Alves Fujinaka</b>
+          <b>Kayke Fujinaka</b>
         </sub>
       </a>
     </td>
@@ -111,7 +106,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 ## 📝 License
 
-Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
 
 &#xa0;
 
